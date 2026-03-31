@@ -3,3 +3,8 @@ kind: Kustomization
 resources:
   - gotk-components.yaml
   - gotk-sync.yaml
+
+# https://davidelettieri.it/2023/11/01/flux-and-sops-on-aks-with-workload-identity
+patches:
+  - path: patches/kustomize-controller-deployment.yaml
+  - path: patches/kustomize-controller-service-account.yaml
