@@ -21,6 +21,10 @@ spec:
         namespace: flux-system
       interval: 12h
   values:
+    additionalArguments:
+      - --certificatesresolvers.letsencrypt.acme.email=admin@patinanetwork.org
+      - --certificatesresolvers.letsencrypt.acme.storage=/data/acme.json
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web
     deployment:
       replicas: 1
     ingressClass:
