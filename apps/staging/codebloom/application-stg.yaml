@@ -1,5 +1,9 @@
-# External Spring overrides for staging.
-# This file is mounted into the container at /config/application-stg.yaml.
+# override any codebloom properties here
+
+#TODO: wait for Codebloom to move scheduled to a configuration
+# spring:
+#   scheduling:
+#     enabled: false
 
 springdoc:
   swagger-ui:
