@@ -5,3 +5,4 @@ resources:
   - provider-config.yaml
   - members
   - teams
+  - repositories

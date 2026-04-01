@@ -1,0 +1,24 @@
+{{- range $repoName, $_ := .Values.repositories }}
+{{- $repoResourceName := $repoName | lower | replace "_" "-" | replace "." "-" }}
+---
+apiVersion: repo.github.upbound.io/v1alpha1
+kind: RepositoryRuleset
+metadata:
+  name: {{ printf "%s-default-branch" $repoResourceName }}
+spec:
+  forProvider:
+    name: default-branch
+    enforcement: active
+    target: branch
+    repositoryRef:
+      name: {{ $repoResourceName }}
+    conditions:
+      - refName:
+          - include:
+              - ~DEFAULT_BRANCH
+            exclude: []
+    rules:
+      - requiredLinearHistory: true
+  providerConfigRef:
+    name: {{ $.Values.providerConfigName }}
+{{- end }}

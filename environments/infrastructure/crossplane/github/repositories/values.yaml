@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=./values.schema.json
+providerConfigName: github
+repositories:
+  example-repository:
+    visibility: private
+    read:
+      - "@Patina-Network/read-only"
+    write:
+      - "@Patina-Network/admin"
+  existing-repository:
+    existing: true
+    visibility: public
+    read:
+      - "@Patina-Network/read-only"
+    write:
+      - "@Patina-Network/codebloom"
