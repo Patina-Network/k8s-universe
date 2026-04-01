@@ -1,6 +1,9 @@
 # External Spring overrides for staging.
 # This file is mounted into the container at /config/application.yaml.
 
-spring:
-  scheduling:
+springdoc:
+  swagger-ui:
     enabled: false
+  api-docs:
+    enabled: false
+    version: OPENAPI_3_0
