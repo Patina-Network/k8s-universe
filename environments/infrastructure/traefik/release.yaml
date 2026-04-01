@@ -45,4 +45,7 @@ spec:
           tls:
             enabled: true
     service:
+      annotations:
+        service.beta.kubernetes.io/azure-load-balancer-resource-group: MC_PatinaTesting_k8s-universe_eastus
+        service.beta.kubernetes.io/azure-pip-name: traefik-public-ip
       type: LoadBalancer
