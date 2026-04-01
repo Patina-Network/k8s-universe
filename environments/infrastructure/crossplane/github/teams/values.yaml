@@ -1,6 +1,16 @@
 # yaml-language-server: $schema=./values.schema.json
 providerConfigName: github
 teams:
+  # ALL MEMBERS SHOULD GO HERE
+  developers:
+    privacy: closed
+    members:
+      - username: tahminator
+        role: member
+      - username: arklian
+        role: member
+      - username: Arshadul-Monir
+        role: member
   codebloom:
     privacy: closed
     members:
@@ -15,13 +25,3 @@ teams:
         role: maintainer
       - username: arklian
         role: maintainer
-  # ALL MEMBERS SHOULD GO HERE
-  read-only:
-    privacy: closed
-    members:
-      - username: tahminator
-        role: member
-      - username: arklian
-        role: member
-      - username: Arshadul-Monir
-        role: member

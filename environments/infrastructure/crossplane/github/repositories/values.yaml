@@ -4,7 +4,14 @@ repositories:
   example-repository:
     existing: false
     visibility: private
-    read:
-      - "@Patina-Network/read-only"
-    write:
+    maintain:
       - "@Patina-Network/admin"
+    write:
+      - "@Patina-Network/dev"
+  k8s-universe:
+    existing: true
+    visibility: public
+    maintain:
+      - "@Patina-Network/admin"
+    write:
+      - "@Patina-Network/dev"
