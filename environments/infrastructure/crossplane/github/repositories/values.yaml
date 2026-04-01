@@ -2,6 +2,7 @@
 providerConfigName: github
 repositories:
   example-repository:
+    existing: false
     visibility: private
     read:
       - "@Patina-Network/read-only"

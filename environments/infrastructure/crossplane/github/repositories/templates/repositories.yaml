@@ -12,7 +12,7 @@ metadata:
 spec:
   forProvider:
     name: {{ $repoName }}
-    visibility: {{ default "private" $repo.visibility }}
+    visibility: {{ $repo.visibility }}
     allowMergeCommit: false
     allowRebaseMerge: false
     allowSquashMerge: true

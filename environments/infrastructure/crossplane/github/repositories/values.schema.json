@@ -15,15 +15,16 @@
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
+        "required": ["existing", "visibility"],
         "properties": {
           "existing": {
             "type": "boolean",
-            "description": "Whether the repository already exists in GitHub and should be adopted by external name instead of created fresh. Defaults to false."
+            "description": "Whether the repository already exists in GitHub and should be adopted by external name instead of being created."
           },
           "visibility": {
             "type": "string",
             "enum": ["public", "private", "internal"],
-            "description": "GitHub repository visibility. Defaults to private."
+            "description": "GitHub repository visibility."
           },
           "read": {
             "type": "array",
