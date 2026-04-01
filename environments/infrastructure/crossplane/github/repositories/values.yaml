@@ -8,10 +8,3 @@ repositories:
       - "@Patina-Network/read-only"
     write:
       - "@Patina-Network/admin"
-  existing-repository:
-    existing: true
-    visibility: private
-    read:
-      - "@Patina-Network/read-only"
-    write:
-      - "@Patina-Network/codebloom"
