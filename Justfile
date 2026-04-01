@@ -4,6 +4,12 @@ encrypt file *args:
 decrypt file *args:
   sops --decrypt --in-place {{ file }} {{ args }}
 
+e file *args:
+  just encrypt {{ file }} {{ args }}
+
+d file *args:
+  just decrypt {{ file }} {{ args }}
+
 appe app env:
   just encrypt apps/{{ env }}/{{ app }}/secrets.yaml
 
