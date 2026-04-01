@@ -1,17 +1,27 @@
 # yaml-language-server: $schema=./values.schema.json
 providerConfigName: github
 teams:
-  - name: codebloom
+  codebloom:
     privacy: closed
     members:
       - username: arklian
         role: member
       - username: Arshadul-Monir
         role: member
-  - name: admin
+  admin:
     privacy: closed
     members:
       - username: tahminator
         role: maintainer
       - username: arklian
         role: maintainer
+  # ALL MEMBERS SHOULD GO HERE
+  read-only:
+    privacy: closed
+    members:
+      - username: tahminator
+        role: member
+      - username: arklian
+        role: member
+      - username: Arshadul-Monir
+        role: member

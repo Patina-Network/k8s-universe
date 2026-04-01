@@ -10,17 +10,13 @@
       "description": "The Crossplane ProviderConfig name for GitHub."
     },
     "teams": {
-      "type": "array",
-      "description": "List of GitHub teams to be managed.",
-      "items": {
+      "type": "object",
+      "description": "Map of GitHub teams keyed by team name.",
+      "additionalProperties": {
         "type": "object",
-        "required": ["name", "privacy", "members"],
+        "required": ["privacy", "members"],
         "additionalProperties": false,
         "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the GitHub team."
-          },
           "privacy": {
             "type": "string",
             "enum": ["secret", "closed"],
