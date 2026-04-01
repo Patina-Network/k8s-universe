@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: ./environments/infrastructure/crossplane/github/members
+  path: ./environments/infrastructure/crossplane/github
   prune: true
   wait: true
   sourceRef:

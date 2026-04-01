@@ -4,7 +4,7 @@ metadata:
   name: github-membership
   namespace: flux-system
 spec:
-  interval: 30m
+  interval: 10m
   chart:
     spec:
       chart: ./environments/infrastructure/crossplane/github/members
