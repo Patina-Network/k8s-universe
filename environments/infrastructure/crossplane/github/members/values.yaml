@@ -5,3 +5,5 @@ members:
     role: admin
   - username: arklian
     role: admin
+  - username: Arshadul-Monir
+    role: member
