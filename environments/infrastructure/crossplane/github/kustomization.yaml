@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - provider.yaml
   - secret.yaml
+  - membership/release.yaml # Helm templated
