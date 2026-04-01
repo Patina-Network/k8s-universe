@@ -20,6 +20,12 @@ spec:
     rules:
       # enforce linear history org-wide
       - requiredLinearHistory: true
+        nonFastForward: true
+        pullRequest:
+          - dismissStaleReviewsOnPush: true
+            requireCodeOwnerReview: true
+            requiredReviewThreadResolution: true
+          # requiredApprovingReviewCount: 1
   providerConfigRef:
     name: {{ $.Values.providerConfigName }}
 {{- end }}
