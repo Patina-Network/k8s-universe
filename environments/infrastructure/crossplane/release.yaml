@@ -21,9 +21,15 @@ spec:
         namespace: flux-system
       interval: 12h
   values:
+    resourcesCrossplane:
+      requests:
+        cpu: 20m
     provider:
       packages:
         - xpkg.upbound.io/crossplane-contrib/provider-upjet-github:v0.19.0
     replicas: 1
     rbacManager:
       replicas: 1
+    resourcesRBACManager:
+      requests:
+        cpu: 20m
