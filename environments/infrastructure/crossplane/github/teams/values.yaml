@@ -42,6 +42,13 @@ teams:
         role: member
       - username: MalihaT111
         role: member
+  infra:
+    privacy: closed
+    members:
+      - username: tahminator
+        role: member
+      - username: arklian
+        role: member
   admin:
     privacy: closed
     members:
