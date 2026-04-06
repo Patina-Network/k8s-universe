@@ -1,0 +1,18 @@
+# override any codebloom properties here
+
+codebloom:
+  scheduling:
+    enabled: false
+  notify:
+    enabled: false
+
+management:
+  endpoint:
+    env:
+      # /actuator/* is pwd protected so this is ok
+      # show-values: "always"
+  endpoints:
+    web:
+      exposure:
+        # add beans and env
+        include: prometheus, health, beans, env
