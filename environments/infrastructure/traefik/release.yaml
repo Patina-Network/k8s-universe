@@ -23,9 +23,15 @@ spec:
   values:
     additionalArguments:
       - --certificatesresolvers.letsencrypt.acme.email=tech@patinanetwork.org
-      # todo: make more permanent
       - --certificatesresolvers.letsencrypt.acme.storage=/data/acme.json
       - --certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web
+    persistence:
+      enabled: true
+      name: traefik-data
+      accessMode: ReadWriteOnce
+      size: 1Gi
+      path: /data
+      storageClass: default
     deployment:
       replicas: 1
     ingressClass:
