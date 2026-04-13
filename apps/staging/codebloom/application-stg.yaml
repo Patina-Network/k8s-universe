@@ -9,7 +9,7 @@ codebloom:
 spring:
   datasource:
     hikari:
-      maximum-pool-size: 1
+      maximum-pool-size: 2
 
 management:
   endpoint:
