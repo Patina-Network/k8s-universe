@@ -9,7 +9,7 @@ spec:
   routes:
     - match: HostSNI(`db.k8s.patinanetwork.org`)
       services:
-        - name: postgres-public
+        - name: postgres
           port: 5432
   tls:
     passthrough: true
