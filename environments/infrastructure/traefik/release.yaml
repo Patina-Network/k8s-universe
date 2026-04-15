@@ -25,6 +25,11 @@ spec:
       - --certificatesresolvers.letsencrypt.acme.email=tech@patinanetwork.org
       - --certificatesresolvers.letsencrypt.acme.storage=/data/acme.json
       - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+      - --metrics.prometheus=true
+      - --accesslog=true
+      - --accesslog.format=json
+      - --accesslog.fields.names.ClientUsername=drop
+      - --accesslog.fields.headers.defaultmode=keep
     persistence:
       enabled: true
       name: traefik-data
