@@ -11,10 +11,10 @@ d file *args:
   just decrypt {{ file }} {{ args }}
 
 appe app env:
-  just encrypt apps/{{ env }}/{{ app }}/secrets.yaml
+  just encrypt base/{{ env }}/{{ app }}/secrets.yaml
 
 appd app env:
-  just decrypt apps/{{ env }}/{{ app }}/secrets.yaml
+  just decrypt base/{{ env }}/{{ app }}/secrets.yaml
 
 reconcile *args:
   flux reconcile ks flux-system --with-source {{ args }}
