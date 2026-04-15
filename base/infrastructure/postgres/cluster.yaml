@@ -2,8 +2,8 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
-  name: postgres-shared
-  namespace: production
+  name: postgres
+  namespace: infrastructure
 spec:
   instances: 1
   imageName: ghcr.io/cloudnative-pg/postgresql:16
