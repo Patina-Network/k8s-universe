@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - ./codebloom
-  - ./postgres
   - ./middleware
   - ./observability
