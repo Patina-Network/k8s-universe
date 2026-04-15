@@ -1,8 +1,8 @@
 encrypt file *args:
-  sops --encrypt --in-place {{ file }} {{ args }}
+  just install-pre-commit && sops --encrypt --in-place {{ file }} {{ args }}
 
 decrypt file *args:
-  sops --decrypt --in-place {{ file }} {{ args }}
+  just install-pre-commit && sops --decrypt --in-place {{ file }} {{ args }}
 
 e file *args:
   just encrypt {{ file }} {{ args }}
@@ -24,6 +24,12 @@ based app env:
 
 reconcile *args:
   flux reconcile ks flux-system --with-source {{ args }}
+
+install-pre-commit:
+  cp pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+install-pre-push:
+  cp pre-commit .git/hooks/pre-push && chmod +x .git/hooks/pre-push
 
 watch:
   watch "git log -1 && echo '---' && kubectl get pods -A && echo '---' && flux get kustomizations"
