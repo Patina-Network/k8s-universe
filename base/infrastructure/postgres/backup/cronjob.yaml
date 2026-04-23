@@ -23,6 +23,8 @@ spec:
               env:
                 - name: PGHOST
                   value: postgres.infrastructure.svc.cluster.local
+                - name: PGDATABASE
+                  value: postgres
                 - name: PGUSER
                   valueFrom:
                     secretKeyRef:
