@@ -6,7 +6,7 @@ resources:
   - ingress.yaml
   - secrets.yaml
   - service.yaml
-  - monitor.yaml
+  - servicemonitor.yaml
 configMapGenerator:
   - name: codebloom-spring-config
     files:
