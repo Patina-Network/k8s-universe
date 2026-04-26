@@ -19,9 +19,6 @@ spec:
   enableSuperuserAccess: true
   superuserSecret:
     name: postgres-creds
-  monitoring:
-    # TODO: re-enable when pod monitor support is setup
-    enablePodMonitor: false
   bootstrap:
     initdb:
       database: postgres
