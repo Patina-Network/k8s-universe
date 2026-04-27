@@ -13,3 +13,6 @@ spec:
           port: 5432
   tls:
     secretName: postgres-k8s-tls
+    options:
+      name: postgres-tls-protocol
+      namespace: infrastructure
