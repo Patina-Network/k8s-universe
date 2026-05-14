@@ -3,3 +3,6 @@
 watch_*
 
 .kube/
+
+# IntelliJ
+.idea
